@@ -13,22 +13,57 @@ body{
 }
 
 .movie{
-    width: 200px;
-    min-height: 300px;
+    width: 250px;
+    min-height: 400px;
     background-color: #333;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     border-radius: 10px;
     padding: 10px;
     box-sizing: border-box;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.movie:hover{
+    transform: scale(1.04);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.35);
+    background-color: #3a3a3a;
+}
+
+.movie:active{
+    transform: scale(1.02);
+}
+
+.movie.expanded{
+    transform: scale(1.08);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.45);
+    background-color: #444;
+}
+
+.movie .details {
+    display: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #555;
+}
+
+.movie.expanded .details {
+    display: block;
+}
+
+.movie .details p {
+    margin: 4px 0;
+    font-size: 0.88em;
+    color: #ddd;
 }
 
 .movie img {
     width: 100%;
     height: auto;
-    max-height: 150px;
+    max-height: 200px;
     object-fit: cover;
     border-radius: 5px;
 }
@@ -36,18 +71,19 @@ body{
 .movie h3 {
     font-size: 1.1em;
     margin: 10px 0;
-    text-align: center;
+    text-align: left;
 }
 
 .movie .title-time {
     font-size: 0.9em;
     color: #ccc;
     margin: 5px 0;
-    text-align: center;
+    text-align: left;
 }
 
 .movie p {
-    font-size: 0.8em;
-    margin: 5px 0;
-    text-align: center;
+    font-size: 0.95em;
+    margin: 6px 0;
+    text-align: left;
+    line-height: 1.5;
 }
