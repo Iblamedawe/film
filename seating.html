@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Foglalás - GREAT CINEMA</title>
+    <link rel="stylesheet" href="seatingStyle.css">
+    <script src="seatingScript.js" defer></script>
 </head>
 <body>
+<h1>GREAT CINEMA</h1>
+<div class="asd">
+
+    <div class="interface">
+        <img src="kep/screenSVG.png" alt="Vetítővászon" class="screen">
+        <div class="cinema" id="cinema"></div>
+    </div>
+    <div>
+        <div class="legend">
+            <span><div class="box free"></div> Szabad</span>
+            <span><div class="box chosen"></div> Kiválasztott</span>
+            <span><div class="box taken"></div> Foglalt</span>
+        </div>
+        
+        <p>Kiválasztott helyek: <span id="count">0</span></p>
+        
+        <button id="confirmBtn" disabled>Helyek megerősítése</button>
+    </div>
+</div>
     
 </body>
 </html>
